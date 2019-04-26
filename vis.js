@@ -61,8 +61,9 @@ class Visualize {
 
         this.jsNode.addEventListener('audioprocess', _ => {
             this.analyserNode.getByteFrequencyData(this.frequencyData);
-
-            cancelAnimationFrame(this.raf);
+            
+            // This next line seems to impact performance quite a lot
+            // cancelAnimationFrame(this.raf);
             this.raf = requestAnimationFrame(() => this.drawCanvas());
         });
     }

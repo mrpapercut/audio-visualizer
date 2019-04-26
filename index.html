@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<title>Audio Visualizer</title>
+<style>
+canvas {
+    clear: both;
+    border: 10px solid #000;
+}
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<button id="play">Play</button>
+<button id="stop">Stop</button>
+
+<script src="vis.js"></script>
+<script>
+window.onload = () => {
+    const canvas1 = document.getElementById('canvas');
+    const btnPlay1 = document.getElementById('play');
+    const btnStop1 = document.getElementById('stop');
+    const vis1 = new Visualize('sample.mp3', canvas, btnPlay, btnStop);
+}
+</script>
+</body>
+</html>
